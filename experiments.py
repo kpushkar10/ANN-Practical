@@ -87,4 +87,5 @@ early_stopping_callback = EarlyStopping(monitor='val_loss', patience=10, restore
 history = model.fit(x_train, y_train, validation_data=(x_test, y_test), epochs=100,
                     callbacks=[tensorflow_callback, early_stopping_callback])
 
-model.save('model.h5')
+# model.save('model.h5')
+model.save("model.keras", save_format="keras")
